@@ -1,0 +1,16 @@
+.card__content {
+  max-width: 413px;
+  min-width: 288px;
+  display: flex;
+  justify-content: space-between;
+}
+.card__name {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
