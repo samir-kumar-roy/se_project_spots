@@ -14,3 +14,6 @@
   white-space: nowrap;
   overflow: hidden;
 }
+.card__image {
+  width: 100%;
+}
