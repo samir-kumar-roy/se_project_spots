@@ -8,6 +8,7 @@
 }
 .profile__avatar {
   margin-right: 20px;
+  border-radius: 4px;
 }
 .profile__column {
   display: flex;
@@ -45,10 +46,10 @@
 }
 .profile__name {
   margin: 0;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 32px;
-  line-height: 32px;
+  line-height: 1;
+  margin-bottom: 12px;
   color: #212121;
 
   text-overflow: ellipsis;
@@ -60,7 +61,6 @@
 }
 .profile__description {
   margin: 0;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
 
@@ -81,17 +81,24 @@
     margin-right: 0;
     height: 80px;
     width: 80px;
+    margin-bottom: 6px;
+  }
+  .profile__column {
+    gap: 12px;
   }
   .profile__name {
     text-align: center;
+    font-size: 20px;
   }
   .profile__description {
     text-align: center;
   }
   .profile__edit-button {
     margin: 0 auto;
+    margin-top: 12px;
   }
   .profile__post-button {
+    margin-top: 20px;
     margin-left: 0;
     width: 100%;
   }

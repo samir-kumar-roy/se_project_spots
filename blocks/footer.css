@@ -2,9 +2,11 @@
   display: flex;
   justify-content: center;
   padding: 20px 0;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+.footer__text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1.2;
   color: #212121;
+  text-align: center;
 }
