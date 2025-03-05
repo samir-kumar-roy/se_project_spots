@@ -16,15 +16,20 @@
 }
 .card__image {
   width: 100%;
-  height: 470px;
+  height: 413px;
   border-radius: 4px;
 }
 .card__like-button {
+  border: none;
+  background-color: transparent;
   transition: all 0.3s ease;
 }
 .card__like-button:hover {
-  opacity: 0.7;
   cursor: pointer;
+}
+.card__like-icon {
+  height: 20px;
+  width: 23px;
 }
 @media screen and (max-width: 767px) {
   .card__image {

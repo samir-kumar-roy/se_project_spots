@@ -39,7 +39,7 @@
 .profile__post-button:hover {
   cursor: pointer;
 }
-.profile__post_plus-sign {
+.profile__post-icon {
   height: 12px;
   width: 12px;
   margin-right: 8px;
