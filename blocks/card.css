@@ -3,6 +3,7 @@
   min-width: 288px;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .card__name {
   font-weight: 500;
