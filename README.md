@@ -9,3 +9,6 @@ It has been built using html and css. I used both flexbox and grid because the s
 #Link for the live project is below
 
 https://samir-kumar-roy.github.io/se_project_spots/
+
+#Description video link of the project:
+https://www.loom.com/share/4cedd0f4625d4eae9afd45236b3fb7c9?sid=e8bf3b0f-70ec-4efd-abae-4f854deeda87
