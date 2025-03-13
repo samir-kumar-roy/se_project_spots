@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  margin: 8px 0 0;
 }
 .card__name {
   font-weight: 500;
@@ -39,13 +40,18 @@
   height: 20px;
   width: 23px;
 }
-@media screen and (max-width: 767px) {
+
+/* @media screen and (max-width: 767px) {
   .card__name {
     font-size: 16px;
     line-height: 1.2;
   }
-}
+} */
 @media screen and (max-width: 441px) {
+  .card__name {
+    font-size: 16px;
+    line-height: 1.2;
+  }
   .card__image {
     width: 288px;
     height: 288px;
