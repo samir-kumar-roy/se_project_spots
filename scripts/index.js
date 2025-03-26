@@ -24,3 +24,13 @@ const initialCards = [
     link: "https://www.travelandleisure.com/thmb/B1XWpAn2EERgkZDTtiqVt_ofbgc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/garden-of-the-gods-colorado-BEAUTYSTS0522-17d3f1da19434e11a1def9559e8e6997.jpg",
   },
 ];
+const editProfileButton = document.querySelector(".profile__edit-button");
+const editModal = document.querySelector("#edit-modal");
+const editModalCloseButton = editModal.querySelector(".modal__close-btn");
+editProfileButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  editModal.classList.add("modal__opened");
+});
+editModalCloseButton.addEventListener("click", function () {
+  editModal.classList.remove("modal__opened");
+});
