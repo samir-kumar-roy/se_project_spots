@@ -16,7 +16,7 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/Logo.svg" alt="spot logo" class="header_logo" />
+        <img src="./images/Logo.svg" alt="spot logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
@@ -64,9 +64,13 @@
         <div class="modal__container">
           <h2 class="modal__title">Edit Profile</h2>
           <button class="modal__close-btn" type="button">
-            <img src="./images/close.png" class="modal__close-image" />
+            <img
+              src="./images/close.svg"
+              class="modal__close-image"
+              alt="modal close button"
+            />
           </button>
-          <form class="modal__form" name="edit_profile">
+          <form class="modal__form" name="edit_profile" id="profile-form">
             <label class="modal__label">
               Name
               <input

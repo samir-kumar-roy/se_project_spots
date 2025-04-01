@@ -27,7 +27,8 @@ const initialCards = [
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editModal = document.querySelector("#edit-modal");
 const editModalCloseButton = editModal.querySelector(".modal__close-btn");
-const editFormElement = editModal.querySelector(".modal__form");
+const profileFormElement = document.forms["profile-form"];
+// const editFormElement = editModal.querySelector(".modal__form");
 const editFormNameElement = document.querySelector("#name");
 const editFormDescriptionElement = document.querySelector("#description");
 const profileNameElement = document.querySelector(".profile__name");
@@ -38,21 +39,21 @@ const cardsList = document.querySelector(".cards__list");
 
 editProfileButton.addEventListener("click", function (e) {
   e.preventDefault();
-  editModal.classList.add("modal__opened");
+  editModal.classList.add("modal_opened");
   editFormNameElement.value = profileNameElement.textContent;
   editFormDescriptionElement.value = profileDescriptionElement.textContent;
 });
 // handlerFunction
-function submitEditButtonHandle(e) {
+function handleProfileFormSubmit(e) {
   e.preventDefault();
   profileNameElement.textContent = editFormNameElement.value;
   profileDescriptionElement.textContent = editFormDescriptionElement.value;
-  editModal.classList.remove("modal__opened");
+  closeEditModal();
 }
 // Edit form submit button handling
-editFormElement.addEventListener("submit", submitEditButtonHandle);
+profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 function closeEditModal() {
-  editModal.classList.remove("modal__opened");
+  editModal.classList.remove("modal_opened");
 }
 editModalCloseButton.addEventListener("click", closeEditModal);
 // rendering card template

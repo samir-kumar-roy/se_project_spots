@@ -10,8 +10,9 @@
   align-items: center;
   visibility: hidden;
   padding: 0 16px;
+  transition: visibility 0.4s ease;
 }
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 .modal__container {
@@ -86,12 +87,23 @@
   opacity: 0.7;
   cursor: pointer;
 }
-@media screen and (max-width: 646px) {
+@media screen and (max-width: 768px) {
+  .modal__container {
+    top: 134px;
+    width: 576px;
+  }
   .modal__close-btn {
     top: 12px;
     right: 12px;
   }
+  .modal__submit-btn {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 646px) {
   .modal__container {
+    height: 336px;
     padding: 12px;
   }
   .modal__title {
@@ -104,8 +116,9 @@
   .modal__input {
     font-size: 16px;
   }
-  .modal__submit-btn {
-    display: block;
-    width: 100%;
+}
+@media screen and (max-width: 320px) {
+  .modal {
+    max-width: 320px;
   }
 }
