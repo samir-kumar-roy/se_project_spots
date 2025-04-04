@@ -47,6 +47,12 @@
     line-height: 1.2;
   }
 } */
+@media screen and (max-width: 498px) {
+  .card {
+    max-width: 380px;
+    width: 300px;
+  }
+}
 @media screen and (max-width: 441px) {
   .card__name {
     font-size: 16px;
@@ -55,5 +61,19 @@
   .card__image {
     width: 288px;
     height: 288px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .card {
+    max-width: 300px;
+    padding: 10px;
+  }
+  .card__name {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .card__image {
+    max-width: 280px;
+    height: 280px;
   }
 }
