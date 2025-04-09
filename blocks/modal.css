@@ -109,7 +109,7 @@
 }
 @media screen and (max-width: 680px) {
   .modal__container {
-    width: 460px;
+    max-width: 460px;
   }
   .modal__title {
     margin: 10px 0 34px;
@@ -124,19 +124,18 @@
 }
 @media screen and (max-width: 580px) {
   .modal__container {
-    width: 380px;
+    max-width: 360px;
   }
 }
 @media screen and (max-width: 498px) {
   .modal__container {
-    padding: 12px;
-    max-width: 340px;
-    width: 300px;
+    padding: 5px 10px;
+    max-width: 300px;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 320px) {
   .modal__container {
-    max-width: 280px;
-    width: 240px;
+    max-width: 278px;
   }
 }

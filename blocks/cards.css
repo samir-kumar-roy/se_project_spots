@@ -9,10 +9,19 @@
   border-bottom: 1px solid #21212166;
 }
 
-@media screen and (max-width: 441px) {
+@media screen and (max-width: 768px) {
   .cards__list {
-    grid-template-columns: repeat(1, 288px);
-    padding: 20px 0;
+    grid-template-columns: repeat(1, 380px);
     gap: 20px;
+  }
+}
+@media screen and (max-width: 498px) {
+  .cards__list {
+    grid-template-columns: repeat(1, 340px);
+  }
+}
+@media screen and (max-width: 320px) {
+  .cards__list {
+    grid-template-columns: repeat(1, 300px);
   }
 }
