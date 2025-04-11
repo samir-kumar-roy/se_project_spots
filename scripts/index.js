@@ -71,8 +71,9 @@ function getCardElement(data) {
 
   return cardElement;
 }
-// looping through initialcards array items
-for (let i = 0; i < initialCards.length; i++) {
-  const cardEl = getCardElement(initialCards[i]);
+// Looping through initialCards array items using forEach loop
+initialCards.forEach(function (card) {
+  console.log(card.name);
+  const cardEl = getCardElement(card);
   cardsList.append(cardEl);
-}
+});
