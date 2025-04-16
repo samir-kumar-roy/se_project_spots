@@ -95,6 +95,42 @@
           </form>
         </div>
       </section>
+      <!-- new post modal -->
+      <section class="modal" id="new-post-modal">
+        <div class="modal__container">
+          <h2 class="modal__title">Edit Profile</h2>
+          <button class="modal__close-btn" type="button">
+            <img
+              src="./images/close.svg"
+              class="modal__close-image"
+              alt="modal close button"
+            />
+          </button>
+          <form class="modal__form" name="edit_profile" id="new-post-form">
+            <label class="modal__label">
+              Name
+              <input
+                type="text"
+                class="modal__input"
+                name="name"
+                id="name"
+                placeholder="Type your name"
+              />
+            </label>
+            <label class="modal__label">
+              Description
+              <input
+                type="text"
+                class="modal__input"
+                name="description"
+                id="description"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button class="modal__submit-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </section>
       <footer class="footer">
         <p class="footer__text">2025 @ Samir Roy</p>
       </footer>
