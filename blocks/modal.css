@@ -23,6 +23,27 @@
   background-color: #fff;
   color: #000;
 }
+.modal__image-container {
+  position: relative;
+  background-color: transparent;
+}
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.modal__caption {
+  position: absolute;
+  background-color: rgba(33, 33, 33, 1);
+  color: #fff;
+  width: fit-content;
+  border-radius: 8px;
+  bottom: -43px;
+  padding: 4px 8px;
+}
 .modal__title {
   margin: 0;
   padding: 4px 0;
@@ -33,12 +54,35 @@
 }
 .modal__close-btn {
   position: absolute;
+  background-color: transparent;
   top: 32px;
   right: 50px;
   height: 40px;
   width: 40px;
   border: none;
   transition: all 0.3s ease;
+  background-image: url("../images/close-gray.svg");
+  opacity: 0.4;
+}
+.modal__close-btn:hover {
+  cursor: pointer;
+  background-image: url("../images/close-hover.svg");
+  opacity: 1;
+}
+.modal__preview_close_button {
+  position: absolute;
+  right: -52.5px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url("../images/close-white.svg");
+  border: none;
+  transition: background-image 0.3s ease;
+}
+.modal__preview_close_button:hover {
+  cursor: pointer;
+  background-image: url("../images/close-hover.svg");
 }
 .modal__close-image {
   height: 100%;
@@ -83,8 +127,7 @@
   width: 156px;
   transition: all 0.3s ease;
 }
-.modal__submit-btn:hover,
-.modal__close-btn:hover {
+.modal__submit-btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -126,6 +169,10 @@
   .modal__container {
     max-width: 360px;
   }
+  .modal__preview_close_button {
+    top: -48px;
+    right: 0;
+  }
 }
 @media screen and (max-width: 498px) {
   .modal__container {
@@ -137,5 +184,8 @@
 @media screen and (max-width: 320px) {
   .modal__container {
     max-width: 278px;
+  }
+  .modal__image {
+    max-width: unset;
   }
 }

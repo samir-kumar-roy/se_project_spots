@@ -47,14 +47,15 @@
                 <img src="" alt="" class="card__image" />
                 <div class="card__content">
                   <h3 class="card__name"></h3>
-                  <button type="button" class="card__like-button">
-                    <img
-                      src="./images/heart.svg"
-                      alt="like button"
-                      class="card__like-icon"
-                    />
-                  </button>
+                  <button type="button" class="card__like-button"></button>
                 </div>
+                <button class="card__delete-button">
+                  <img
+                    src="./images/delete.svg"
+                    alt="card delete button"
+                    class="card__delete-icon"
+                  />
+                </button>
               </li>
             </template>
           </ul>
@@ -63,13 +64,7 @@
       <section class="modal" id="edit-modal">
         <div class="modal__container">
           <h2 class="modal__title">Edit Profile</h2>
-          <button class="modal__close-btn" type="button">
-            <img
-              src="./images/close.svg"
-              class="modal__close-image"
-              alt="modal close button"
-            />
-          </button>
+          <button class="modal__close-btn" type="button"></button>
           <form class="modal__form" name="edit_profile" id="profile-form">
             <label class="modal__label">
               Name
@@ -98,37 +93,43 @@
       <!-- new post modal -->
       <section class="modal" id="new-post-modal">
         <div class="modal__container">
-          <h2 class="modal__title">Edit Profile</h2>
-          <button class="modal__close-btn" type="button">
-            <img
-              src="./images/close.svg"
-              class="modal__close-image"
-              alt="modal close button"
-            />
-          </button>
+          <h2 class="modal__title">New Post</h2>
+          <button class="modal__close-btn" type="button"></button>
           <form class="modal__form" name="edit_profile" id="new-post-form">
             <label class="modal__label">
-              Name
+              Image Link
               <input
                 type="text"
                 class="modal__input"
-                name="name"
-                id="name"
-                placeholder="Type your name"
+                name="image-link"
+                id="image-link"
+                placeholder="Image Link"
               />
             </label>
             <label class="modal__label">
-              Description
+              Caption
               <input
                 type="text"
                 class="modal__input"
-                name="description"
-                id="description"
-                placeholder="Describe yourself"
+                name="image-caption"
+                id="image-caption"
+                placeholder="Image Caption"
               />
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
+        </div>
+      </section>
+      <!-- Image Preview modal -->
+      <section class="modal" id="preview-modal">
+        <div class="modal__image-container">
+          <img
+            src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+            alt=""
+            class="modal__image"
+          />
+          <button class="modal__preview_close_button" type="button"></button>
+          <p class="modal__caption">Image Caption</p>
         </div>
       </section>
       <footer class="footer">

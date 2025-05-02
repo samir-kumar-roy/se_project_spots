@@ -29,8 +29,14 @@ const newPostButton = document.querySelector(".profile__post-button");
 
 const editModal = document.querySelector("#edit-modal");
 const newPostModal = document.querySelector("#new-post-modal");
+const previewModal = document.querySelector("#preview-modal");
+const previewImage = previewModal.querySelector(".modal__image");
+const previewCaption = previewModal.querySelector(".modal__caption");
 const editModalCloseButton = editModal.querySelector(".modal__close-btn");
 const newPostModalCloseButton = newPostModal.querySelector(".modal__close-btn");
+const previewModalCloseButton = previewModal.querySelector(
+  ".modal__preview_close_button"
+);
 const profileFormElement = document.forms["profile-form"];
 const newPostFormElement = document.forms["new-post-form"];
 // const editFormElement = editModal.querySelector(".modal__form");
@@ -62,7 +68,14 @@ function editProfileSubmitHandler(e) {
 }
 function newPostSubmitHandler(e) {
   e.preventDefault();
-  // somethinf to do with form element
+  // something to do with form element
+  const imageLink = document.querySelector("#image-link").value;
+  const imageCaption = document.querySelector("#image-caption").value;
+  const newCardData = { name: imageCaption, link: imageLink };
+  initialCards.unshift(newCardData);
+  const cardEl = getCardElement(newCardData);
+  console.log(cardEl);
+  cardsList.prepend(cardEl);
   closeModal("#new-post-modal");
 }
 // Edit form submit button handling
@@ -86,12 +99,30 @@ function getCardElement(data) {
   cardName.textContent = data.name;
   cardImage.src = data.link;
   cardImage.alt = data.name;
+  const likeButtonDefault = cardElement.querySelector(".card__like-button");
+  likeButtonDefault.addEventListener("click", (evt) => {
+    evt.target.classList.toggle("card__like-button_liked");
+  });
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
+  cardDeleteButton.addEventListener("click", () => {
+    cardElement.remove();
+    cardElement = null;
+  });
+  cardImage.addEventListener("click", (evt) => {
+    previewImage.src = data.link;
+    previewImage.alt = data.name;
+    previewCaption.textContent = data.name;
+    previewModal.classList.add("modal_opened");
+  });
+  previewModalCloseButton.addEventListener("click", () => {
+    previewModal.classList.remove("modal_opened");
+  });
 
   return cardElement;
 }
 // Looping through initialCards array items using forEach loop
 initialCards.forEach(function (card) {
-  console.log(card.name);
+  // console.log(card.name);
   const cardEl = getCardElement(card);
   cardsList.append(cardEl);
 });
