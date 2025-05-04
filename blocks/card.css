@@ -1,5 +1,4 @@
 .card {
-  padding: 0 20px;
   position: relative;
 }
 .card__content {
@@ -14,7 +13,7 @@
   line-height: 1.2;
   color: #212121;
   margin: 0;
-
+  max-width: 162px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -31,13 +30,13 @@
 .card__delete-button {
   height: 32px;
   width: 32px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   border-radius: 50%;
   border: none;
   transition: all 0.4s ease-in-out;
   position: absolute;
   top: 10px;
-  right: 30px;
+  right: 10px;
 }
 .card__delete-icon {
   height: 15px;
@@ -76,34 +75,10 @@
 }
 @media screen and (max-width: 768px) {
   .card__image {
-    height: 320px;
-  }
-}
-@media screen and (max-width: 498px) {
-  .card__image {
     height: 288px;
-  }
-}
-@media screen and (max-width: 441px) {
-  .card__name {
-    font-size: 16px;
-    line-height: 1.2;
-  }
-  .card__image {
-    max-width: 320px;
-    height: 320px;
+    width: 288px;
   }
   .card__content {
-    max-width: 320px;
     box-sizing: border-box;
-  }
-}
-@media screen and (max-width: 320px) {
-  .card__image {
-    max-width: 288px;
-    height: 288px;
-  }
-  .card__content {
-    max-width: 288px;
   }
 }
