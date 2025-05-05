@@ -47,8 +47,9 @@ function newPostSubmitHandler(e) {
   const imageCaption = newPostElements[1].value;
   const newCardData = { name: imageCaption, link: imageLink };
   initialCards.unshift(newCardData);
-  const cardEl = getCardElement(newCardData);
-  cardsList.prepend(cardEl);
+  renderCard(newCardData, "prepend");
+  newPostElements[0].value = "";
+  newPostElements[1].value = "";
   closeModal(newPostModal);
 }
 // Edit form submit button handling
