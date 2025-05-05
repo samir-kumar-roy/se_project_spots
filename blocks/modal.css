@@ -151,6 +151,10 @@
     display: block;
     width: 100%;
   }
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: -12px;
+  }
 }
 @media screen and (max-width: 680px) {
   .modal__container {
