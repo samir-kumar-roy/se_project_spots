@@ -73,9 +73,12 @@
                 class="modal__input"
                 name="name"
                 id="name"
+                minlength="2"
+                maxlength="40"
                 placeholder="Type your name"
                 required
               />
+              <span class="modal__error" id="name-error">Error!!</span>
             </label>
             <label class="modal__label">
               Description
@@ -84,9 +87,12 @@
                 class="modal__input"
                 name="description"
                 id="description"
+                minlength="2"
+                maxlength="200"
                 placeholder="Describe yourself"
                 required
               />
+              <span class="modal__error" id="description-error">Error!!</span>
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
@@ -101,13 +107,14 @@
             <label class="modal__label">
               Image Link
               <input
-                type="text"
+                type="url"
                 class="modal__input"
                 name="image-link"
                 id="image-link"
                 placeholder="Image Link"
                 required
               />
+              <span class="modal__error" id="image-link-error">Error!!</span>
             </label>
             <label class="modal__label">
               Caption
@@ -117,8 +124,11 @@
                 name="image-caption"
                 id="image-caption"
                 placeholder="Image Caption"
+                minlength="2"
+                maxlength="30"
                 required
               />
+              <span class="modal__error" id="image-caption-error">Error!!</span>
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
@@ -143,6 +153,7 @@
         <p class="footer__text">2025 @ Samir Roy</p>
       </footer>
     </div>
+    <script src="./scripts/validation.js" defer></script>
     <script src="./scripts/cards.js" defer></script>
     <script src="./scripts/index.js" defer></script>
   </body>

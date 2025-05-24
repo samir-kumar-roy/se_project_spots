@@ -22,11 +22,17 @@ const profileDescriptionElement = document.querySelector(
   ".profile__description"
 );
 const newPostElements = newPostFormElement.elements;
+const newPostSubmitButton =
+  newPostFormElement.querySelector(".modal__submit-btn");
+const editProfileSubmitButton =
+  editProfileFormElement.querySelector(".modal__submit-btn");
 const cardsList = document.querySelector(".cards__list");
 
 editProfileButton.addEventListener("click", function (e) {
   editFormNameElement.value = profileNameElement.textContent;
   editFormDescriptionElement.value = profileDescriptionElement.textContent;
+  editProfileSubmitButton.disabled = true;
+  editProfileSubmitButton.classList.add("button_inactive");
   openModal(editModal);
 });
 // new post modal opening
@@ -42,7 +48,6 @@ function editProfileSubmitHandler(e) {
 }
 function newPostSubmitHandler(e) {
   e.preventDefault();
-  // something to do with form element
   const imageLink = newPostElements[0].value;
   const imageCaption = newPostElements[1].value;
   const newCardData = { name: imageCaption, link: imageLink };
@@ -50,6 +55,8 @@ function newPostSubmitHandler(e) {
   renderCard(newCardData, "prepend");
   newPostElements[0].value = "";
   newPostElements[1].value = "";
+  newPostSubmitButton.disabled = true;
+  newPostSubmitButton.classList.add("button_inactive");
   closeModal(newPostModal);
 }
 // Edit form submit button handling
