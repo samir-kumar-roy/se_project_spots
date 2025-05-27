@@ -113,10 +113,30 @@ initialCards.forEach(function (card) {
 function openModal(modal) {
   if (modal) {
     modal.classList.add("modal_opened");
+    document.addEventListener("keydown", modalCloseOnEscapePress);
   }
 }
 function closeModal(modal) {
   if (modal) {
     modal.classList.remove("modal_opened");
+    modal.remove;
+    document.removeEventListener("keydown", modalCloseOnEscapePress);
   }
 }
+// handler for closing the modal on pressing the 'Escape' key
+function modalCloseOnEscapePress(evt) {
+  const modals = document.querySelectorAll(".modal");
+  if (evt.key === "Escape") {
+    modals.forEach((modal) => {
+      closeModal(modal);
+    });
+  }
+}
+// clicking on overlay and close the modal
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
