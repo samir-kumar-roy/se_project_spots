@@ -142,10 +142,10 @@
   opacity: 0.7;
   cursor: pointer;
 }
-.button_inactive {
+.modal__submit-button_inactive {
   opacity: 0.3;
 }
-.button_inactive:hover {
+.modal__submit-button_inactive:hover {
   opacity: 0.3;
   cursor: default;
 }
