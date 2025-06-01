@@ -29,9 +29,9 @@ const editProfileSubmitButton =
 const cardsList = document.querySelector(".cards__list");
 
 editProfileButton.addEventListener("click", function (e) {
+  resetValidation(editProfileFormElement, editProfileSubmitButton, settings);
   editFormNameElement.value = profileNameElement.textContent;
   editFormDescriptionElement.value = profileDescriptionElement.textContent;
-  disableSubmitButton(editProfileSubmitButton, settings);
   openModal(editModal);
 });
 // new post modal opening
@@ -43,7 +43,6 @@ function editProfileSubmitHandler(e) {
   e.preventDefault();
   profileNameElement.textContent = editFormNameElement.value;
   profileDescriptionElement.textContent = editFormDescriptionElement.value;
-  resetValidation(e.target, editProfileSubmitButton, settings);
   closeModal(editModal);
 }
 function newPostSubmitHandler(e) {
@@ -53,7 +52,8 @@ function newPostSubmitHandler(e) {
   const newCardData = { name: imageCaption, link: imageLink };
   initialCards.unshift(newCardData);
   renderCard(newCardData, "prepend");
-  resetValidation(e.target, newPostSubmitButton, settings);
+  newPostFormElement.reset();
+  disableSubmitButton(newPostSubmitButton, settings);
   closeModal(newPostModal);
 }
 // Edit form submit button handling
