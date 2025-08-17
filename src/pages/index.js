@@ -6,7 +6,7 @@ import {
   disableSubmitButton,
 } from "../scripts/validation.js";
 // import { initialCards } from "../scripts/cards.js";
-import Api from "../../utils/Api.js";
+import Api from "../utils/Api.js";
 const editProfileButton = document.querySelector(".profile__edit-button");
 const newPostButton = document.querySelector(".profile__post-button");
 
