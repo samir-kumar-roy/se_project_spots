@@ -78,4 +78,4 @@ const enableValidation = (config) => {
     setEventListeners(formEl, config);
   });
 };
-enableValidation(settings);
+export { enableValidation, settings, resetValidation, disableSubmitButton };
